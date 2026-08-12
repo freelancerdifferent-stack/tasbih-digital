@@ -1,0 +1,10 @@
+[{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target": {
+    "namespace": "android_app",
+    "package_name": "id.tasbihdigital.app",
+    "sha256_cert_fingerprints": [
+      "F0:84:4E:97:23:F7:2B:8D:0F:8C:E5:3C:AD:33:3D:99:DD:41:CC:BA:05:BD:A6:68:38:48:CD:23:05:FD:AE:A6"
+    ]
+  }
+}]

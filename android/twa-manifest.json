@@ -1,0 +1,48 @@
+{
+  "packageId": "id.tasbihdigital.app",
+  "host": "freelancerdifferent-stack.github.io",
+  "name": "Tasbih Digital",
+  "launcherName": "Tasbih",
+  "display": "standalone",
+  "themeColor": "#0D3629",
+  "navigationColor": "#0D3629",
+  "navigationColorDark": "#0D3629",
+  "navigationDividerColor": "#0D3629",
+  "backgroundColor": "#06231C",
+  "enableNotifications": false,
+  "startUrl": "/tasbih-digital/index.html",
+  "webManifestUrl": "https://freelancerdifferent-stack.github.io/tasbih-digital/manifest.json",
+  "fullScopeUrl": "https://freelancerdifferent-stack.github.io/tasbih-digital/",
+  "iconUrl": "https://freelancerdifferent-stack.github.io/tasbih-digital/icons/icon-512.png",
+  "maskableIconUrl": "https://freelancerdifferent-stack.github.io/tasbih-digital/icons/icon-512-maskable.png",
+  "splashScreenFadeOutDuration": 300,
+  "signingKey": {
+    "path": "./android.keystore",
+    "alias": "android"
+  },
+  "appVersionName": "1.0.0",
+  "appVersionCode": 1,
+  "shortcuts": [],
+  "generatorApp": "bubblewrap-cli",
+  "fallbackType": "customtabs",
+  "features": {
+    "locationDelegation": {
+      "enabled": false
+    },
+    "playBilling": {
+      "enabled": false
+    }
+  },
+  "alphaDependencies": {
+    "enabled": false
+  },
+  "enableSiteSettingsShortcut": true,
+  "isChromeOSOnly": false,
+  "isMetaQuest": false,
+  "orientation": "portrait",
+  "minSdkVersion": 21,
+  "fingerprints": [],
+  "additionalTrustedOrigins": [],
+  "retainedBundles": [],
+  "protocolHandlers": []
+}
