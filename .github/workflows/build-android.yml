@@ -56,16 +56,16 @@ jobs:
           jq --arg alias "$ANDROID_KEY_ALIAS" '.signingKey.alias = $alias' twa-manifest.json > tmp.json
           mv tmp.json twa-manifest.json
 
+      - name: Generate Android project from twa-manifest.json
+        working-directory: android
+        run: bubblewrap update --skipVersionUpgrade
+
       - name: Build signed APK & AAB
         working-directory: android
         env:
-          ANDROID_KEYSTORE_PASSWORD: ${{ secrets.ANDROID_KEYSTORE_PASSWORD }}
-          ANDROID_KEY_PASSWORD: ${{ secrets.ANDROID_KEY_PASSWORD }}
-        run: |
-          yes | bubblewrap build \
-            --skipPwaValidation \
-            --password="$ANDROID_KEYSTORE_PASSWORD" \
-            --keyPassword="$ANDROID_KEY_PASSWORD"
+          BUBBLEWRAP_KEYSTORE_PASSWORD: ${{ secrets.ANDROID_KEYSTORE_PASSWORD }}
+          BUBBLEWRAP_KEY_PASSWORD: ${{ secrets.ANDROID_KEY_PASSWORD }}
+        run: bubblewrap build --skipPwaValidation
 
       - name: Remove keystore from the runner
         if: always()
